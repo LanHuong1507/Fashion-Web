@@ -10,20 +10,28 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>'
+        <a href="#"><img src="img/logo.png" class="logo" alt="Logo"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a class="active"  href="about.html">About</a></li>
+                <li><a class="active" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <li id="lg-bag">
+                    <a href="cart.html">
+                        <i class="far fa-shopping-bag"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
                 <a href="" id="close"><i class="far fa-times"></i></a>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <a href="cart.html">
+                <i class="far fa-shopping-bag"></i>
+                <span id="mobile-cart-count">0</span> <!-- Cart count display for mobile -->
+            </a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
@@ -128,6 +136,7 @@
             </div>
             <p>Secured Payment Gateways</p>
             <img src="img/pay/pay.png" alt="">
+            <button id="reset-cart">Reset Cart</button>
         </div>
         <div class="copyright">
             <p>@ 2021, Tech etc - HTML CSS Ecommerce Template</p>

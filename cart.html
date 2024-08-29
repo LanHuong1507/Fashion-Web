@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashion Website</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"></link>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>'
+        <a href="#"><img src="img/logo.png" class="logo" alt="Logo"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -18,19 +18,29 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a  class="active"  href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <li id="lg-bag">
+                    <a href="cart.html">
+                        <i class="far fa-shopping-bag"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
                 <a href="" id="close"><i class="far fa-times"></i></a>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <a href="cart.html">
+                <i class="far fa-shopping-bag"></i>
+                <span id="mobile-cart-count">0</span> <!-- Cart count display for mobile -->
+            </a>
             <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
+    
     <section id="page-header" class="about-header">
         <h2>#let's_talk</h2>
-        <p>LEAVE A MESSAGE,We love to hear from you</p>
+        <p>LEAVE A MESSAGE, We love to hear from you</p>
     </section>
+    
     <section id="cart" class="section-p1">
         <table width="100%">
             <thead>
@@ -43,40 +53,25 @@
                     <td>Subtotal</td>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                    <td><img src="img/products/f1.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
-                <tr>
-                    <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                    <td><img src="img/products/f2.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
-                <tr>
-                    <td><i class="far fa-times-circle"><a href="#"></a></i></td>
-                    <td><img src="img/products/f3.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirts</td>
-                    <td>$118.19</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$118.19</td>
-                </tr>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically injected here by JavaScript -->
             </tbody>
         </table>
     </section>
+    
     <section id="cart-add" class="section-p1">
         <div id="coupon">
             <h3>Apply Coupon</h3>
             <div>
-                <input type="text" placeholder="Enter Your Coupon">
-                <button class="normal">Apply</button>
+                <select id="coupon-select">
+                    <option value="" data-discount="0" data-percent="0">Select Coupon</option>
+                    <option value="coupon5" data-discount="5">Coupon for $5 off</option>
+                    <option value="coupon10" data-discount="10">Coupon for $10 off</option>
+                    <option value="coupon20" data-discount="20">Coupon for $20 off</option>
+                    <option value="coupon10percent" data-percent="10">10% off for orders over $500</option>
+                </select>
+                
+                <button id="apply-coupon" class="normal">Apply</button>
             </div>
         </div>
         <div id="subtotal">
@@ -84,20 +79,25 @@
             <table>
                 <tr>
                     <td>Cart Subtotal</td>
-                    <td>$ 335</td>
+                    <td id="cart-subtotal">$0.00</td>
                 </tr>
                 <tr>
                     <td>Shipping</td>
-                    <td>Free</td>
+                    <td id="shipping-fee">$0.00</td>
+                </tr>
+                <tr>
+                    <td>Discount</td>
+                    <td id="coupon-discount">$0.00</td>
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td><strong>$ 335</strong></td>
+                    <td><strong id="cart-total">$0.00</strong></td>
                 </tr>
             </table>
-            <button class="normal">Proceed to checkout</button>
+            <button class="normal">Proceed to Checkout</button>
         </div>
     </section>
+    
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="img/logo.png" alt="">
@@ -141,11 +141,13 @@
             </div>
             <p>Secured Payment Gateways</p>
             <img src="img/pay/pay.png" alt="">
+            <button id="reset-cart">Reset Cart</button>
         </div>
         <div class="copyright">
             <p>@ 2021, Tech etc - HTML CSS Ecommerce Template</p>
         </div>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>

@@ -119,13 +119,93 @@ body {
     bottom: -4px;
     left: 4px;
 }
-#mobile{
+#mobile {
     display: none;
+}
+
+#mobile a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    display: flex;
     align-items: center;
 }
+
+#mobile-cart-count {
+    background-color: red;
+    color: #fff;
+    border-radius: 20px;
+    padding: 4px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -8px;  /* Position above the icon */
+    right: 0px; /* Position to the right edge of the icon */
+}
+
+#bar {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.far.fa-shopping-bag {
+    font-size: 24px; /* Make the shopping bag icon larger */
+    margin-right: 5px; /* Space between the icon and the cart count */
+    position: relative; /* To position the cart count relative to the icon */
+}
+
+#bar {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 10px; /* Space between the bar icon and other content */
+}
+
+#mobile a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+#mobile a:hover {
+    color: #ffcc00; /* Add a hover effect to the link */
+}
+
+#mobile i {
+    font-size: 24px; /* Ensure icons are the same size */
+}
+
 #close {
     display: none;
 }
+#lg-bag {
+    position: relative;
+}
+
+#lg-bag #cart-count {
+    position: absolute;
+    top: -8px; /* Positioning of the badge */
+    right: -8px; /* Positioning of the badge */
+    background-color: #d70909; /* A soft red color for the badge */
+    color: white;
+    padding: 4px 8px; /* Larger padding for a rounded look */
+    border-radius: 12px; /* Rounded badge */
+    font-size: 12px;
+    font-weight: bold; /* Bold text for better readability */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transition effects */
+}
+#lg-bag a {
+    color: inherit; /* Keep the color of the icon the same */
+    text-decoration: none;
+}
+
+#lg-bag i {
+    font-size: 24px; /* Adjust the icon size to fit the badge design */
+    transition: color 0.2s ease; /* Smooth transition for color */
+}
+
 /*Home Page*/
 #hero{
     background-image: url("img/hero4.png");
@@ -465,6 +545,22 @@ footer .copyright{
     width: 100%;
     text-align: center;
 }
+/* CSS */
+#reset-cart{
+    background-color:red; /* Red background color for visibility */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#reset-cart:hover {
+    background-color: black; /* Darker red when hovered */
+}
+
 /*SHOP*/
 #page-header{
     background-image: url("img/banner/b1.jpg");
@@ -791,12 +887,13 @@ footer .copyright{
 #subtotal{
     padding-bottom: 15px;
 }
-#coupon input{
-    padding: 10px 20px;
-    outline: none;
-    width: 60%;
+#coupon select{
+    padding: 10px 15px;
+    width: 70%;
     margin-right: 10px;
-    border: 1px solid #e2e9e1;
+}
+#coupon select option{
+    padding: 10px 15px;
 }
 #coupon button,
 #subtotal button{

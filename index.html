@@ -18,14 +18,23 @@
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                <li id="lg-bag">
+                    <a href="cart.html">
+                        <i class="far fa-shopping-bag"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                
                 <a href="" id="close"><i class="far fa-times"></i></a>
             </ul>
         </div>
         <div id="mobile">
-            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+            <a href="cart.html">
+                <i class="far fa-shopping-bag"></i>
+                <span id="mobile-cart-count">0</span> <!-- Cart count display for mobile -->
+            </a>
             <i id="bar" class="fas fa-outdent"></i>
-        </div>
+        </div>        
     </section>
     <section id="hero">
         <h4>Trade-in offer</h4>
@@ -64,7 +73,7 @@
         <h2>Featured Products</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" data-id="1" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f1.jpg">
                 <img src="img/products/f1.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -80,8 +89,8 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
-                <img src="img/products/f2.jpg" alt="">
+            <div class="pro" data-id="2" data-name="Cartoon Astronaut T-Shirts" data-price="$78.00" data-image="img/products/f2.jpg">
+                <img src="img/products/f2.jpg" alt="" >
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -96,7 +105,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="3" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f3.jpg">
                 <img src="img/products/f3.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -112,7 +121,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="4" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f4.jpg">
                 <img src="img/products/f4.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -128,7 +137,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="5" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f5.jpg">
                 <img src="img/products/f5.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -144,7 +153,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="6" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f6.jpg">
                 <img src="img/products/f6.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -160,7 +169,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="7" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f7.jpg">
                 <img src="img/products/f7.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -176,7 +185,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="8" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/f8.jpg">
                 <img src="img/products/f8.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -203,7 +212,7 @@
         <h2>New Arrivals</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" data-id="9" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n1.jpg">
                 <img src="img/products/n1.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -215,11 +224,11 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$78.00</h4>
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="10" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n2.jpg">
                 <img src="img/products/n2.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -235,7 +244,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="11" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n3.jpg">
                 <img src="img/products/n3.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -251,7 +260,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="12" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n4.jpg">
                 <img src="img/products/n4.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -267,7 +276,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="13" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n5.jpg">
                 <img src="img/products/n5.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -282,8 +291,8 @@
                     <h4>$78</h4>
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
+            </div> 
+            <div class="pro" data-id="14" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n6.jpg">
                 <img src="img/products/n6.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -299,7 +308,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="15" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n7.jpg">
                 <img src="img/products/n7.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -315,7 +324,7 @@
                 </div>
                 <a href="#"> <i class=" fal fa-shopping-cart cart"></i></a>
             </div>
-            <div class="pro">
+            <div class="pro" data-id="16" data-name="Cartoon Astronaut T-Shirts" data-price="78.00" data-image="img/products/n8.jpg">
                 <img src="img/products/n8.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -414,6 +423,7 @@
             </div>
             <p>Secured Payment Gateways</p>
             <img src="img/pay/pay.png" alt="">
+            <button id="reset-cart">Reset Cart</button>
         </div>
         <div class="copyright">
             <p>@ 2021, Tech etc - HTML CSS Ecommerce Template</p>
