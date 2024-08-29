@@ -158,7 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             return 10;
         }
-    }    
+    }
+
     // Apply selected coupon
     function applyCoupon() {
         const selectedOption = couponSelect.options[couponSelect.selectedIndex];

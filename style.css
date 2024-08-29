@@ -918,6 +918,117 @@ footer .copyright{
     padding: 10px;
     font-size: 13px;
 }
+/* Checkout Page Styles */
+#checkout {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#checkout h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+#checkout-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#billing-info,
+#order-summary {
+    width: 48%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#billing-info h3,
+#order-summary h3 {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#billing-info label,
+#billing-info input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#billing-info input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+#order-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#order-summary table th,
+#order-summary table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#order-summary table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#order-summary table td img {
+    width: 50px;
+    height: auto;
+}
+
+#order-summary table input[type="number"] {
+    width: 50px;
+    padding: 5px;
+}
+
+#order-summary p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#order-summary p span {
+    font-weight: bold;
+}
+
+/* Buttons */
+#finalize-checkout {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#finalize-checkout:hover {
+    background-color: #555;
+}
 
 /* Start Media Query*/
 @media (max-width:799px){
